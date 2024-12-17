@@ -1,3 +1,21 @@
 h1{
-  color: red;
+  color: #596ace;
+}
+.first-container{
+  margin: 20px;
+  background-color: #e0daf8a8;
+  text-align: center;
+  padding: 20px;
+}
+.second-container{
+    margin: 20px;
+    background-color: #d3f8e1a8;
+    text-align: center;
+    padding: 20px;
+}
+.header{
+  text-align: left;
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
 }

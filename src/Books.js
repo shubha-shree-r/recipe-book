@@ -1,5 +1,4 @@
 function Book(props) {
-    console.log(props.book)
 
     function clickHandler (){
         alert("hello")

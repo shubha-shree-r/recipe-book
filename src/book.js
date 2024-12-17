@@ -16,3 +16,18 @@ export const books = [
       authoe:"Jeevan"
     },
   ]
+
+  export const data = [
+    {
+      id:1,
+      name:"shubha"
+    },
+    {
+      id:2,
+      name:"jeevan",
+    },
+    {
+      id:3,
+      name:"W&H"
+    }
+  ]
