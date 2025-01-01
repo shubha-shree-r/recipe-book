@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../css/sidenav.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope,faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 
 
 function SideNav() {
@@ -18,8 +18,13 @@ function SideNav() {
   return (
     <div className={`sidebar ${isOpen ? "open" : ""}`}>
       <button className="sidebar-toggle" onClick={toggleNav}>
-       <span> Menu</span>
-       <span> <FontAwesomeIcon icon={faArrowRight} /></span>
+      <span>
+          {isOpen ? (
+            <FontAwesomeIcon icon={faXmark} />  // Show 'X' icon when open
+          ) : (
+            <FontAwesomeIcon icon={faBars} />  // Show 'bars' icon when closed
+          )}
+        </span>
        
       </button>
      
