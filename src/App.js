@@ -3,8 +3,9 @@ import "./App.css";
 import { books, data } from "./book";
 import Book from "./Books";
 import SideNav from "./components/SideNav";
-
-
+import TopNav from "./components/TopNav";
+import Home from "./components/Home";
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 function MyApp() {
   
@@ -28,8 +29,20 @@ function MyApp() {
   })
   return (
     <>
+   
     <div>
+    <TopNav/>
+    </div>
+    <div>
+      
     <SideNav/>
+    </div>
+    
+    <div>
+    <main className="home-container"> 
+          <Home /> 
+        </main>
+   
     </div>
       <div className="first-container">
       <div className="header">State and props with event basis</div>

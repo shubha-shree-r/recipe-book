@@ -19,3 +19,13 @@ h1{
   font-size: 2rem;
   font-weight: bold;
 }
+body{
+  background-image: url('../src/assets/bg-menu.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.home-container {
+  flex-grow: 1; 
+  padding: 20px; 
+}

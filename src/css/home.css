@@ -1,0 +1,10 @@
+.menu-card {
+    /* margin: 20px; */
+    background-color: #ffff;
+    text-align: center;
+    /* padding: 20px; */
+    box-shadow: 6px 2px 7px rgb(15 14 14 / 93%)/* Adjust shadow as needed */
+}
+.menu-card.order-1{
+    position: relative;
+}
