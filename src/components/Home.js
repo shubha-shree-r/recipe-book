@@ -1,57 +1,33 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../css/home.css"
-import { useInView } from "react-intersection-observer";
 // import { Link } from 'react-router-dom'; // If using React Router
 function Home() {
-  const { ref: firstRef, inView: firstInView } = useInView({
-    triggerOnce: true,
-  });
-  const { ref: secondRef, inView: secondInView } = useInView({
-    triggerOnce: true,
-  });
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    if (firstInView && firstRef.current) {
-      // Apply animation to the first div
-      firstRef.current.style.animation = 'slideInFromBottom 0.5s ease-in-out forwards';
-    }
-  }, [firstInView]);
-  
-  useEffect(() => {
-    if (secondInView && secondRef.current) {
-      // Apply animation to the second div
-      secondRef.current.style.animation = 'slideInFromBottom 0.5s ease-in-out forwards';
-    }
-  }, [secondInView]);
+    // Set a timeout to make the menu visible after 2 seconds
+    const timer = setTimeout(() => {
+      setVisible(true);
+    }, 1000); // 2 seconds delay
 
+    // Cleanup the timer if component unmounts
+    return () => clearTimeout(timer);
+  }, []);
   return (
-    <div>
-      <div className="row">
-        <div className="col-sm-6 menu-card order-2" ref={firstRef}>hi</div>
-        <div className="col-sm-6 menu-card order-1" ref={secondRef}>hello</div>
+    <div className="container">
+       <div className="row">
+      <div className="col-sm-6 menu-card" style={{ animation: visible ? 'slideUp 1s forwards' : 'none' }}>
+        hi
       </div>
+      <div className="col-sm-6 menu-card" style={{ animation: visible ? 'slideUp 1s forwards 0.5s' : 'none' }}>
+        hello
+      </div>
+    </div>
     </div>
   );
 }
 
-// CSS for the animation
-const styles = {
-  '@keyframes slideInFromBottom': {
-    '0%': {
-      transform: 'translateY(50px)',
-      opacity: 0,
-    },
-    '100%': {
-      transform: 'translateY(0)',
-      opacity: 1,
-    },
-  },
-};
 
-// Apply styles to the component
-Home.defaultProps = {
-  style: styles,
-};
 
 
 export default Home;

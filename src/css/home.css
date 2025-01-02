@@ -3,8 +3,31 @@
     background-color: #ffff;
     text-align: center;
     /* padding: 20px; */
-    box-shadow: 6px 2px 7px rgb(15 14 14 / 93%)/* Adjust shadow as needed */
+    box-shadow:-1px 4px 19px rgb(15 14 14 / 93%);/* Adjust shadow as needed */
+    animation: slideUp 2s forwards;
+    height: 30vh;
+    background: linear-gradient(to right, #edb251, #f8f8f8);
+
 }
-.menu-card.order-1{
+.menu-card{
     position: relative;
+}
+
+@keyframes slideUp {
+    0% {
+        bottom: -100px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+.menu-card:nth-child(1) {
+    animation-delay: 2s; /* First div starts immediately */
+}
+
+.menu-card:nth-child(2) {
+    animation-delay: 5s; /* Second div starts 1s after the first */
 }
