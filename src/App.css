@@ -29,3 +29,26 @@ body{
   flex-grow: 1; 
   padding: 20px; 
 }
+.footer{
+  background-color: #edb251d6;
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 20vh;
+}
+.footer-header{
+  background-color: #fff;
+  position: relative;
+  left: 25%;
+  /* right: 50%; */
+  height: 30vh;
+  width: 50%;
+  border-radius: 10px;
+  bottom: -30px;
+    z-index: 9;
+    background-image: url('../src/assets/footerhead.webp');
+    opacity: 0.8;
+    background-size: cover;
+    background-position: center;
+}

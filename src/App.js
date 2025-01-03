@@ -1,50 +1,50 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import { books, data } from "./book";
-import Book from "./Books";
+import { data } from "./book";
 import SideNav from "./components/SideNav";
 import TopNav from "./components/TopNav";
 import Home from "./components/Home";
-import 'bootstrap/dist/css/bootstrap.min.css'; 
-
+import "bootstrap/dist/css/bootstrap.min.css";
 function MyApp() {
-  
   const [state, setState] = useState("Shubha");
   const [teams, setTeam] = useState(data);
- 
-   function onHandleClick(){
-        setTeam([])
-   }
+
+  function onHandleClick() {
+    setTeam([]);
+  }
 
   function handleClick() {
     if (state === "Shubha") {
       setState("Jeevan");
     } else {
       setState("Shubha");
-    }   
+    }
   }
 
   useEffect(() => {
-    console.log("useEffect")
-  })
+    console.log("useEffect");
+  });
   return (
     <>
-   
-    <div>
-    <TopNav/>
-    </div>
-    <div>
-      
-    <SideNav/>
-    </div>
-    
-    <div>
-    <main className="home-container"> 
-          <Home /> 
+      <div>
+        <TopNav />
+      </div>
+      <div>
+        <SideNav />
+      </div>
+
+      <div>
+        <main className="home-container">
+          <Home />
         </main>
-   
-    </div>
-      <div className="first-container">
+      </div>
+      <div className="footer-header">
+    
+
+      </div>
+      <div className="footer">
+      </div>
+      {/* <div className="first-container">
       <div className="header">State and props with event basis</div>
         <h2>{state}</h2>
         <button type="button" onClick={handleClick}>Click here</button>
@@ -77,12 +77,9 @@ function MyApp() {
           })}
 
           <button onClick={onHandleClick}>Click here to check useState</button>
-      </div>
+      </div> */}
     </>
-
   );
 }
-
-
 
 export default MyApp;

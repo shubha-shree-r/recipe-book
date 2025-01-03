@@ -5,9 +5,9 @@
     /* padding: 20px; */
     box-shadow:-1px 4px 19px rgb(15 14 14 / 93%);/* Adjust shadow as needed */
     animation: slideUp 2s forwards;
-    height: 30vh;
+    /* height: 30vh; */
     background: linear-gradient(to right, #edb251, #f8f8f8);
-
+    cursor: pointer;
 }
 .menu-card{
     position: relative;
@@ -31,3 +31,110 @@
 .menu-card:nth-child(2) {
     animation-delay: 5s; /* Second div starts 1s after the first */
 }
+.menu-sub-div1{
+    background-image: url('../../src/assets/menu-card-1');
+    background-size: cover;
+    /* height: 100%; */
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    background-position: center;
+    /* padding-bottom: 48%; */
+    transition: background-size 0.3s ease-in-out; 
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.menu-sub-div1:hover {
+  background-size: 105% 105%; 
+  
+}
+  
+.menu-sub-div2{
+    background-image: url('../../src/assets/menu-card-2.jfif');
+    background-size: cover;
+    /* height: 100%; */
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    background-position: center;
+    /* padding-bottom: 48%; */
+    transition: background-size 0.3s ease-in-out; 
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.menu-sub-div2:hover {
+  background-size: 105% 105%; 
+} 
+.menu-sub-div1 .menu1-content {
+    padding: 50px; 
+  }
+  .menu-sub-div2 .menu1-content {
+    padding: 50px; 
+  }
+
+  .middle-content h1 {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    color: #ffff;
+    font-family: cursive;
+  }
+  
+  .middle-content h1::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; /* Adjust for desired distance below the text */
+    left: 0;
+    width: 20%;
+    height: 8px; /* Adjust for desired thickness */
+    background: linear-gradient(to right, rgb(171 103 34 / 88%), rgb(255 0 0 / 46%)); /* Adjust colors and opacity */
+    transform: skewX(276deg); /* Adjust for desired skew angle */
+    filter: blur(1px); /* Add slight blur for a softer look */
+    left: 40%;
+    
+  }
+  .underline-text {
+    position: relative; /* Necessary for absolute positioning of the underline */
+    text-align: center;
+  }
+  
+  .underline-text h1 {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    color: #ffff;
+    font-family: cursive;
+  }
+  
+  .underline-text h1::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; /* Adjust for desired distance below the text */
+    left: 0;
+    width: 100%;
+    height: 8px; /* Adjust for desired thickness */
+    background: linear-gradient(to right, rgba(239, 144, 50, 0.92), rgb(255 0 0 / 46%)); /* Orange color */
+    transform: skewX(276deg); /* Skew for a more dynamic look */
+    background-size: 200% 100%; /* Create a stretched gradient effect */
+    background-position: -100%; /* Start the gradient off-screen */
+    transition: background-position 0.5s ease-in-out; /* Add a smooth transition */
+    filter: blur(1px);
+  }
+  
+  .underline-text h1:hover::after {
+    background-position: 100%; /* Shift the gradient to the right on hover */
+  }
+  .footer-card{
+    background-color: #fff;
+    box-shadow:-1px 4px 19px rgb(15 14 14 / 93%);
+    margin: 5px;
+    width: 30% !important;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    cursor:grab;
+    border-radius: 5px;
+    h6{
+        color: grey;
+    }
+  }
+  .footer-card:hover {
+    transform: translateY(-10px); /* Move the card slightly upwards on hover */
+  }
