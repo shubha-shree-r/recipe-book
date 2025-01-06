@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "../css/sidenav.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
-
+import { NavLink, Route, Router, Routes } from "react-router-dom";
+import Home from './Home'
 
 function SideNav() {
   const [isOpen, setOpen] = useState(false);
@@ -35,13 +36,19 @@ function SideNav() {
       </div>
       <nav className="sidebar-nav">
         <ul>
-          <li>Home</li>
+
+          <li>
+          <NavLink to="/">Home</NavLink>
+          </li>
+         
+          
           <li>Menu</li>
-          <li>About</li>
+          <li ><NavLink to="/about">About</NavLink></li>
+          
           <li>Contact</li>
         </ul>
       </nav>
-    </div>
+      </div>
   );
 }
 

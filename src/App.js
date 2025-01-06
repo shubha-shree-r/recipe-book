@@ -4,7 +4,9 @@ import { data } from "./book";
 import SideNav from "./components/SideNav";
 import TopNav from "./components/TopNav";
 import Home from "./components/Home";
+import About from "./components/About";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 function MyApp() {
   const [state, setState] = useState("Shubha");
   const [teams, setTeam] = useState(data);
@@ -26,24 +28,33 @@ function MyApp() {
   });
   return (
     <>
+
       <div>
         <TopNav />
       </div>
       <div>
-        <SideNav />
+          <div className="container">
+          <BrowserRouter>
+            <SideNav />
+            <Routes>
+              <Route path="/" element={<Home/>}></Route>
+              <Route path="/about" element={<About/>}></Route>
+              <Route path="/" element={<Home/>}></Route>
+              <Route path="/" element={<Home/>}></Route>
+            </Routes>
+
+            </BrowserRouter>
+          </div>
+        
       </div>
 
       <div>
-        <main className="home-container">
+        {/* <main className="home-container">
           <Home />
-        </main>
+        </main> */}
       </div>
-      <div className="footer-header">
-    
-
-      </div>
-      <div className="footer">
-      </div>
+      <div className="footer-header"></div>
+      <div className="footer"></div>
       {/* <div className="first-container">
       <div className="header">State and props with event basis</div>
         <h2>{state}</h2>
@@ -78,6 +89,7 @@ function MyApp() {
 
           <button onClick={onHandleClick}>Click here to check useState</button>
       </div> */}
+
     </>
   );
 }
