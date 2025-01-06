@@ -52,3 +52,20 @@ body{
     background-size: cover;
     background-position: center;
 }
+.footer-content{
+  color:black;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 20%;
+  left: 20%;
+}
+.footer-content2{
+  span{
+    margin: 4px;
+    font-size: 1.5rem;
+  }
+}

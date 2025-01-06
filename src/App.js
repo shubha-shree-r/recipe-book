@@ -7,6 +7,11 @@ import Home from "./components/Home";
 import About from "./components/About";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { FaSquareFacebook } from "react-icons/fa6";
+import { faFacebook, faSquareInstagram, faSquareTwitter } from "@fortawesome/free-brands-svg-icons";
+
 function MyApp() {
   const [state, setState] = useState("Shubha");
   const [teams, setTeam] = useState(data);
@@ -28,24 +33,21 @@ function MyApp() {
   });
   return (
     <>
-
       <div>
         <TopNav />
       </div>
       <div>
-          <div className="container">
+        <div className="container">
           <BrowserRouter>
             <SideNav />
             <Routes>
-              <Route path="/" element={<Home/>}></Route>
-              <Route path="/about" element={<About/>}></Route>
-              <Route path="/" element={<Home/>}></Route>
-              <Route path="/" element={<Home/>}></Route>
+              <Route path="/" element={<Home />}></Route>
+              <Route path="/about" element={<About />}></Route>
+              <Route path="/" element={<Home />}></Route>
+              <Route path="/" element={<Home />}></Route>
             </Routes>
-
-            </BrowserRouter>
-          </div>
-        
+          </BrowserRouter>
+        </div>
       </div>
 
       <div>
@@ -53,8 +55,22 @@ function MyApp() {
           <Home />
         </main> */}
       </div>
-      <div className="footer-header"></div>
-      <div className="footer"></div>
+      <div className="footer-header">
+        <div className="footer-content">Join With Us for Your Meal</div>
+      </div>
+      <div className="footer">
+      <div className="footer-content2 container p-4">
+              <span>
+                <FontAwesomeIcon icon={faFacebook} />
+              </span>
+              <span >
+              <FontAwesomeIcon icon={faSquareTwitter} />
+              </span>
+              <span >
+              <FontAwesomeIcon icon={faSquareInstagram} />
+              </span>
+            </div>
+      </div>
       {/* <div className="first-container">
       <div className="header">State and props with event basis</div>
         <h2>{state}</h2>
@@ -89,7 +105,6 @@ function MyApp() {
 
           <button onClick={onHandleClick}>Click here to check useState</button>
       </div> */}
-
     </>
   );
 }
