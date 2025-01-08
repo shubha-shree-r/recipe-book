@@ -5,6 +5,7 @@ import SideNav from "./components/SideNav";
 import TopNav from "./components/TopNav";
 import Home from "./components/Home";
 import About from "./components/About";
+import Menu from "./components/Menu";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -43,8 +44,7 @@ function MyApp() {
             <Routes>
               <Route path="/" element={<Home />}></Route>
               <Route path="/about" element={<About />}></Route>
-              <Route path="/" element={<Home />}></Route>
-              <Route path="/" element={<Home />}></Route>
+              <Route path="/menu" element={<Menu />}></Route>
             </Routes>
           </BrowserRouter>
         </div>
