@@ -42,7 +42,7 @@ function SideNav() {
           </li>
          
           
-          <li>Menu</li>
+          <li><NavLink to="/menu">Menu</NavLink></li>
           <li ><NavLink to="/about">About</NavLink></li>
           
           <li>Contact</li>
